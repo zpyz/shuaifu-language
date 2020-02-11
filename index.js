@@ -24,15 +24,29 @@
         "jue", "que", "xue", "yue", "nve", "lve", "dui", "tui", "gui", "kui", "hui", "zhui", "chui", "shui", "rui",
         "zui", "cui", "sui", "nv", "lv"
     ];
+    let curTheme = '';
+
     let txtIn = document.getElementById('txt_in');
     let txtOut = document.getElementById('txt_out');
     let checkAddBlank = document.getElementById('add_blank');
+    let dialog = document.getElementById('dialog');
+    let selTheme = document.getElementById('sel_theme');
+
     document.getElementById('btn_process').addEventListener('click', _ => {
         txtOut.value = process(txtIn.value, checkAddBlank.checked);
     });
 
     document.getElementById('btn_about').addEventListener('click', _ => {
-        document.getElementById('dialog').visible = true;
+        dialog.visible = true;
+    });
+
+    selTheme.addEventListener('change', e => {
+        document.querySelectorAll('.bcu').forEach(x => {
+            if (curTheme) x.classList.remove(curTheme);
+            if (selTheme.value) x.classList.add(selTheme.value);
+        });
+        curTheme = selTheme.value;
+        dialog.theme = selTheme.value;
     });
 
     function process(text, add_blank) {

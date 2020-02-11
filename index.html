@@ -12,33 +12,53 @@
 <body>
 <div class="card mt-2 ml-2 mr-2" style="max-width: 550px">
     <div class="card-body">
+        <div class="float-right">
+            <label for="sel_theme">主题</label>
+            <select id="sel_theme" class="bcu input" style="width: 80px;display: inline-block;margin-left: 8px;">
+                <option value="">默认</option>
+                <option value="red">红</option>
+                <option value="orange">橙</option>
+                <option value="yellow">黄</option>
+                <option value="green">绿</option>
+                <option value="blue">蓝</option>
+                <option value="purple">紫</option>
+                <option value="coffee">咖啡</option>
+                <option value="mint">薄荷</option>
+                <option value="cherry">樱花</option>
+            </select>
+        </div>
         <h5 class="card-title">帅副语翻译器</h5>
         <div class="form-group">
             <label for="txt_in">输入</label>
-            <textarea id="txt_in" class="bcu input coffee" rows="6"></textarea>
+            <textarea id="txt_in" class="bcu input" rows="6"></textarea>
         </div>
-        <div class="form-group bcu switch coffee">
+        <div class="form-group bcu switch">
             <input type="checkbox" id="add_blank" value="yes" checked>
             <label for="add_blank">添加空格</label>
         </div>
         <div class="form-group">
-            <button id="btn_process" class="bcu btn md block coffee">转换</button>
+            <button id="btn_process" class="bcu btn md block">转换</button>
         </div>
         <div class="form-group">
             <label for="txt_out">输出</label>
-            <textarea id="txt_out" class="bcu input coffee" rows="6"></textarea>
+            <textarea id="txt_out" class="bcu input" rows="6"></textarea>
         </div>
         <div class="form-group">
-            <button id="btn_about" class="bcu btn outline coffee float-right">关于</button>
+            <button id="btn_about" class="bcu btn outline float-right">关于</button>
         </div>
     </div>
 </div>
-<bunny-dialog id="dialog" ok="确定" title="关于帅副语翻译器" theme="coffee">
+<bunny-dialog id="dialog" ok="确定" title="关于帅副语翻译器" theme="">
     <div class="mt-3 mb-3" style="max-height: 200px;overflow-x: auto;">
         <p>开源许可：MIT</p>
-        <p>原始作者：<a href="https://github.com/mektpoy"><img class="rounded-circle" width="32px" src="https://avatars3.githubusercontent.com/u/31686206?s=460&v=4" alt="帅副">帅副</a></p>
-        <p>原始作者：<a href="https://github.com/iyezhiyu"><img class="rounded-circle" width="32px" src="https://avatars0.githubusercontent.com/u/40992801?s=460&v=4" alt="叶神">叶神</a></p>
-        <p><img alt="GitHub stars" src="https://img.shields.io/github/stars/IvanLuLyf/GodLang.svg?style=social"><a href="https://support.qq.com/products/65027">去吐槽</a></p>
+        <p>原始作者：<a href="https://github.com/mektpoy"><img class="rounded-circle" width="32px"
+                                                          src="https://avatars3.githubusercontent.com/u/31686206?s=460&v=4"
+                                                          alt="帅副">帅副</a></p>
+        <p>原始作者：<a href="https://github.com/iyezhiyu"><img class="rounded-circle" width="32px"
+                                                           src="https://avatars0.githubusercontent.com/u/40992801?s=460&v=4"
+                                                           alt="叶神">叶神</a></p>
+        <p><img alt="GitHub stars" src="https://img.shields.io/github/stars/IvanLuLyf/GodLang.svg?style=social"><a
+                href="https://support.qq.com/products/65027">去吐槽</a></p>
         <p>使用的开源项目：</p>
         <p><a href="https://github.com/bunniescc/cappuccino">Cappuccino</a></p>
         <p><a href="https://github.com/bunniescc/BunnyDialog">BunnyDialog</a></p>
