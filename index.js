@@ -52,19 +52,18 @@
     function process(text, add_blank) {
         let result = "";
         for (let i = 0; i < text.length; i++) {
-            if (text[i] in firstLetter && text[i + 1] in secondLetter) {
-                let t = text[i] + text[i + 1];
-                let blank = (text[i + 2] !== ' ' && add_blank) ? ' ' : '';
-                if (t in otherLetter) {
-                    result += (otherLetter[t] + blank);
+            let t = text[i] + text[i + 1];
+            let blank = (text[i + 2] !== ' ' && add_blank) ? ' ' : '';
+            if (t in otherLetter) {
+                result += (otherLetter[t] + blank);
+                i++;
+            } else if (text[i] in firstLetter && text[i + 1] in secondLetter) {
+                if (Array.isArray(secondLetter[text[i + 1]])) {
+                    let w1 = firstLetter[text[i]] + secondLetter[text[i + 1]][0];
+                    let w2 = firstLetter[text[i]] + secondLetter[text[i + 1]][1];
+                    result += (validWords.findIndex(a => a === w1) !== -1) ? (w1 + blank) : ((validWords.findIndex(a => a === w2) !== -1) ? (w2 + blank) : t);
                 } else {
-                    if (Array.isArray(secondLetter[text[i + 1]])) {
-                        let w1 = firstLetter[text[i]] + secondLetter[text[i + 1]][0];
-                        let w2 = firstLetter[text[i]] + secondLetter[text[i + 1]][1];
-                        result += (validWords.findIndex(a => a === w1) !== -1) ? (w1 + blank) : ((validWords.findIndex(a => a === w2) !== -1) ? (w2 + blank) : t);
-                    } else {
-                        result += firstLetter[text[i]] + secondLetter[text[i + 1]] + blank;
-                    }
+                    result += firstLetter[text[i]] + secondLetter[text[i + 1]] + blank;
                 }
                 i++;
             } else {
