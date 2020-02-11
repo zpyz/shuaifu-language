@@ -10,39 +10,39 @@
     <link rel="stylesheet" href="https://c.bunnies.cc/src/cappuccino.css">
 </head>
 <body>
-<div class="card mt-4 ml-4 mr-4">
+<div class="card mt-4 ml-4 mr-4" style="max-width: 550px">
     <div class="card-body">
         <h5 class="card-title">帅副语翻译器</h5>
         <div class="form-group">
             <label for="txt_in">输入</label>
-            <textarea id="txt_in" class="bcu input blue" rows="6"></textarea>
+            <textarea id="txt_in" class="bcu input cherry" rows="6"></textarea>
         </div>
-        <div class="form-group bcu switch blue">
+        <div class="form-group bcu switch cherry">
             <input type="checkbox" id="add_blank" value="yes" checked>
             <label for="add_blank">添加空格</label>
         </div>
         <div class="form-group">
-            <button id="btn_process" class="bcu btn md blue" style="display: block;width: 100%">转换</button>
+            <button id="btn_process" class="bcu btn md block cherry">转换</button>
         </div>
         <div class="form-group">
             <label for="txt_out">输出</label>
-            <textarea id="txt_out" class="bcu input blue" rows="6"></textarea>
+            <textarea id="txt_out" class="bcu input cherry" rows="6"></textarea>
+        </div>
+        <div class="form-group">
+            <button id="btn_about" class="bcu btn md outline cherry float-right">关于</button>
         </div>
     </div>
 </div>
-<div class="card mt-4 ml-4 mr-4 mb-4">
-    <div class="card-body">
-        <h6 class="card-title">开源许可：MIT</h6>
-        <h6 class="card-title">原始作者：<a href="https://github.com/mektpoy"><img class="rounded-circle" width="32px"
-                                                                              src="https://avatars3.githubusercontent.com/u/31686206?s=460&v=4">
-            帅副</a></h6>
-        <h6 class="card-title">原始作者：<a href="mailto:yezhiyu@hotmail.com"><img class="rounded-circle" width="32px"
-                                                                              src="https://tvax3.sinaimg.cn/crop.0.0.996.996.50/007I0zPBly8g1q9xl8ew9j30ro0rowg9.jpg">
-            叶神</a></h6>
+<bunny-dialog id="dialog" ok="确定" title="关于帅副语翻译器" theme="cherry">
+    <div class="mt-3 mb-3">
+        <p>开源许可：MIT</p>
+        <p>原始作者：<a href="https://github.com/mektpoy"><img class="rounded-circle" width="32px" src="https://avatars3.githubusercontent.com/u/31686206?s=460&v=4">帅副</a></p>
+        <p>原始作者：<a href="https://github.com/iyezhiyu"><img class="rounded-circle" width="32px" src="https://avatars0.githubusercontent.com/u/40992801?s=460&v=4">叶神</a></p>
         <img alt="GitHub stars" src="https://img.shields.io/github/stars/IvanLuLyf/GodLang.svg?style=social">
         <a href="https://support.qq.com/products/65027">去吐槽</a>
     </div>
-</div>
+</bunny-dialog>
+<script src="dialog.js"></script>
 <script src="index.js"></script>
 </body>
 </html>

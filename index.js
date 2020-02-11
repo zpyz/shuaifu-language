@@ -31,6 +31,10 @@
         txtOut.value = process(txtIn.value, checkAddBlank.checked);
     });
 
+    document.getElementById('btn_about').addEventListener('click', _ => {
+        document.getElementById('dialog').visible = true;
+    });
+
     function process(text, add_blank) {
         let result = "";
         for (let i = 0; i < text.length; i++) {
