@@ -91,8 +91,8 @@
             }
             if (name === "theme" && this.shadowRoot) {
                 this.shadowRoot.querySelectorAll(".bcu.btn").forEach(b => {
-                    b.classList.remove(oldValue);
-                    b.classList.add(newValue);
+                    if (oldValue) b.classList.remove(oldValue);
+                    if (newValue) b.classList.add(newValue);
                 });
             }
             if (name === "title" && newValue && this.shadowRoot) {
