@@ -8,7 +8,7 @@
 
 小星星有这么多
 
-![GitHub stars](https://img.shields.io/github/stars/Yestagram/sfLang.svg?style=social)
+![GitHub stars](https://img.shields.io/github/stars/zpyz/shuaifu-language.svg?style=social)
 
 ## 开源协议
 
