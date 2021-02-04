@@ -2,7 +2,7 @@
 
 > 帅副指定语言
 
-[体验地址](https://sf.yestagram.ml)
+[体验地址](https://zpyz.github.io/shuaifu-language/)
 
 叶神说要留他的邮箱，所以我就留了[yezhiyu@hotmail.com](yezhiyu@hotmail.com)
 
